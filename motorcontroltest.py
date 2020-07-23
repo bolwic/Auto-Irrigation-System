@@ -1,14 +1,14 @@
 import RPi.GPIO as GPIO
 import time
 
-channel = 13
-channel2 = 7
+channel = 13 #relay 1
+channel2 = 7 #relay 2
 
-#GPIO setup
+#GPIO setup, initializes the relays
 def setup():
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(channel, GPIO.OUT, initial = 1)
-    GPIO.setup(channel2, GPIO.OUT, initial = 0)
+    GPIO.setup(channel, GPIO.OUT, initial = 1) 
+    GPIO.setup(channel2, GPIO.OUT, initial = 0) #due to the wiring of the pump, the on and off of relay 2 is reversed.
 
 
 def motor_on(pin):
