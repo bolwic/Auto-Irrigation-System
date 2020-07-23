@@ -5,6 +5,9 @@ import math
 import datetime
 import picamera
 
+#this is the most current program. I have plans on including a camera that will take a image of the plants once everyday to track how they are growing,\
+#but this feature has yet to be fully implemented.
+
 channel1 = 7 #sun lamp
 channel2 = 13 #water pump
 
@@ -56,7 +59,7 @@ if __name__ == '__main__':
         print("the begining")
         while True:
             current_time = datetime.datetime.now()
-            if((current_time.hour >= 10) and (current_time.hour <= 17)): #currently set to 7am to 6pm
+            if((current_time.hour >= 10) and (current_time.hour <= 17)): #this will turn the sun lampn on between the selected time, currently set to 7am to 6pm
                 lamp_on()
             else:
                 lamp_off()
