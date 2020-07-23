@@ -2,6 +2,7 @@ import Adafruit_ADS1x15
 import RPi.GPIO as GPIO
 import math
 
+#this is to test the moisture sentor
 
 adc = Adafruit_ADS1x15.ADS1115()
 
